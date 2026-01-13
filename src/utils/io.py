@@ -4,6 +4,10 @@ import yaml
 def read_json(json_path: str):
     with open(json_path, "r", encoding="utf-8") as file:
         return json.load(file)
+
+def write_json(json_path: str, data):
+    with open(json_path, "w", encoding="utf-8") as file:
+        return json.dump(data, file, indent=4)
     
 
 def write_yaml(yaml_path: str, data: dict):
