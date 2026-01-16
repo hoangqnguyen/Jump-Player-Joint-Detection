@@ -17,3 +17,7 @@ def write_yaml(yaml_path: str, data: dict):
 def write_txt(txt_path: str, content: str):
     with open(txt_path, "w", encoding="utf-8") as file:
         file.write(content)
+
+def read_yaml(yaml_path: str):
+    with open(yaml_path, "r", encoding="utf-8") as file:
+        return yaml.load(file, Loader=yaml.FullLoader)
